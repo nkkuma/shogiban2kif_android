@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageRecoResultActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="70dp"
+        android:text="認識結果"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="413dp"
+        android:layout_height="461dp"
+        android:layout_marginTop="147dp"
+        android:layout_marginBottom="91dp"
+        android:background="@drawable/ban"
+        android:shrinkColumns="0,1,2,3,4,5,6,7,8"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_91"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_81"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_71"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_61"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_51"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_41"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_31"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_92"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_82"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_72"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_62"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_52"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_42"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_32"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_93"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_83"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_73"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_63"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_53"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_43"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_33"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_94"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_84"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_74"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_64"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_54"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_44"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_34"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_24"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_95"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_85"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_75"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_65"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_55"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_45"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_35"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_25"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_96"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_86"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_76"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_66"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_56"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_46"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_36"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_26"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_97"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_87"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_77"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_67"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_57"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_47"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_37"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_27"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_98"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_88"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_78"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_68"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_58"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_48"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_38"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_28"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_99"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_89"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_79"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_69"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_59"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_49"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_39"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_29"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/imageRecoResultBtn_19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0"
+                android:background="#000000"
+                android:scaleType="fitCenter" />
+        </TableRow>
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginEnd="81dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+         />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="60dp"
+        android:layout_height="62dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="127dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+         />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

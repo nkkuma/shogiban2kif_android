@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "shogiban2kif_android"

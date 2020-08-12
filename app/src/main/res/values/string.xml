@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shogiban2Kif</string>
+    <string name="launch_camera">カメラ起動</string>
+</resources>
