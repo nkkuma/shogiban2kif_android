@@ -114,26 +114,32 @@ class ImageRecoResultActivity : AppCompatActivity() {
     fun getFixedState(): shogibanState {
         var shogibanState = shogibanState()
         // get ban
+        var ban_map = mutableMapOf<Int, String>()
         for (i in 1..9) {
             for (j in 1..9) {
                 val imageView = findViewById<ImageButton>(string2ImageButtonId((i*10+j).toString()))
-                shogibanState.ban_result.plus(Pair(i*10+j,imageView.tag))
+                ban_map[i*10+j] = imageView.tag.toString()
             }
         }
+        shogibanState.ban_result = ban_map
         // mochigoma_name
         val mochigoma_name = resources.getStringArray(R.array.komaname_shogibanState).slice(1..7)
         // get sente
+        var mochigomasente_map = mutableMapOf<String, Int>()
         for (koma in mochigoma_name) {
             val imageView = findViewById<Spinner>(string2MochigomaSpinnerId(koma, "sente"))
             val size = imageView.selectedItem.toString().toInt()
-            if (size > 0) { shogibanState.sente_mochi.plus(Pair(koma, size)) }
+            if (size > 0) { mochigomasente_map[koma] = size }
         }
+        shogibanState.sente_mochi = mochigomasente_map
         // get gote
+        var mochigomagote_map = mutableMapOf<String, Int>()
         for (koma in mochigoma_name) {
             val imageView = findViewById<Spinner>(string2MochigomaSpinnerId(koma, "gote"))
             val size = imageView.selectedItem.toString().toInt()
-            if (size > 0) { shogibanState.gote_mochi.plus(Pair(koma, size)) }
+            if (size > 0) { mochigomagote_map[koma] = size }
         }
+        shogibanState.gote_mochi = mochigomagote_map
         // get teban
         // set empty-point (=already setted as default)
         return shogibanState
