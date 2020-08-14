@@ -753,6 +753,7 @@
         app:layout_constraintTop_toBottomOf="@id/textView_recoresulttitle">
 
         <Spinner
+            android:id="@+id/spinner_mochigomagote_fu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -761,6 +762,7 @@
             android:textAlignment="viewEnd" />
 
         <Spinner
+            android:id="@+id/spinner_mochigomagote_ky"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -769,6 +771,7 @@
             android:textAlignment="viewEnd" />
 
         <Spinner
+            android:id="@+id/spinner_mochigomagote_ke"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -777,6 +780,7 @@
             android:textAlignment="viewEnd" />
 
         <Spinner
+            android:id="@+id/spinner_mochigomagote_gi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -785,6 +789,7 @@
             android:textAlignment="viewEnd" />
 
         <Spinner
+            android:id="@+id/spinner_mochigomagote_ki"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -794,6 +799,7 @@
             android:textAlignment="viewEnd" />
 
         <Spinner
+            android:id="@+id/spinner_mochigomagote_ka"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -802,6 +808,7 @@
             android:textAlignment="viewEnd" />
 
         <Spinner
+            android:id="@+id/spinner_mochigomagote_hi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -820,6 +827,7 @@
         tools:layout_editor_absoluteX="1dp">
 
         <Spinner
+            android:id="@+id/spinner_mochigomasente_fu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -828,6 +836,7 @@
             android:textAlignment="viewEnd" />
 
         <Spinner
+            android:id="@+id/spinner_mochigomasente_ky"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -836,6 +845,7 @@
             android:textAlignment="viewEnd" />
 
         <Spinner
+            android:id="@+id/spinner_mochigomasente_ke"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -844,6 +854,7 @@
             android:textAlignment="viewEnd" />
 
         <Spinner
+            android:id="@+id/spinner_mochigomasente_gi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -852,6 +863,7 @@
             android:textAlignment="viewEnd" />
 
         <Spinner
+            android:id="@+id/spinner_mochigomasente_ki"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -861,6 +873,7 @@
             android:textAlignment="viewEnd" />
 
         <Spinner
+            android:id="@+id/spinner_mochigomasente_ka"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -869,6 +882,7 @@
             android:textAlignment="viewEnd" />
 
         <Spinner
+            android:id="@+id/spinner_mochigomasente_hi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

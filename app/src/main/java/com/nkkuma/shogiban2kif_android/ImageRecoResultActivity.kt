@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
+import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
@@ -23,6 +24,8 @@ class ImageRecoResultActivity : AppCompatActivity() {
         if (response != null) {
             val result = string2Class(response.replace("'","\""))
             setBanImage(result)
+            setMochigomaSenteNumber(result)
+            setMochigomaGoteNumber(result)
         }
         // TODO: illegal pattern Error output
     }
@@ -35,6 +38,10 @@ class ImageRecoResultActivity : AppCompatActivity() {
 
     fun string2ImageButtonId(place: String): Int {
         return resources.getIdentifier("imageRecoResultBtn_$place","id", packageName)
+    }
+
+    fun string2MochigomaSpinnerId(koma: String, teban: String): Int {
+        return resources.getIdentifier("spinner_mochigoma${teban}_${koma}","id", packageName)
     }
 
     fun string2ImageSource(komaString: String): Int {
@@ -64,6 +71,46 @@ class ImageRecoResultActivity : AppCompatActivity() {
         }
     }
 
+    fun initMochigomaSenteNumber() {
+        // mochigoma_name
+        val mochigoma_name = resources.getStringArray(R.array.komaname_shogibanState).slice(1..7)
+        // init mochigoma_number
+        for (koma in mochigoma_name) {
+            val imageView = findViewById<Spinner>(string2MochigomaSpinnerId(koma, "sente"))
+            imageView.setSelection(0)
+        }
+    }
+
+    fun setMochigomaSenteNumber(result: shogibanState) {
+        // init mochigoma sente
+        initMochigomaSenteNumber()
+        // init mochigoma_number
+        for ((koma,num) in result.sente_mochi) {
+            val imageView = findViewById<Spinner>(string2MochigomaSpinnerId(koma, "sente"))
+            imageView.setSelection(num)
+        }
+    }
+
+    fun initMochigomaGoteNumber() {
+        // mochigoma_name
+        val mochigoma_name = resources.getStringArray(R.array.komaname_shogibanState).slice(1..7)
+        // init mochigoma_number
+        for (koma in mochigoma_name) {
+            val imageView = findViewById<Spinner>(string2MochigomaSpinnerId(koma, "gote"))
+            imageView.setSelection(0)
+        }
+    }
+
+    fun setMochigomaGoteNumber(result: shogibanState) {
+        // init mochigoma sgote
+        initMochigomaGoteNumber()
+        // init mochigoma_number
+        for ((koma,num) in result.gote_mochi) {
+            val imageView = findViewById<Spinner>(string2MochigomaSpinnerId(koma, "gote"))
+            imageView.setSelection(num)
+        }
+    }
+
     fun getFixedState(): shogibanState {
         var shogibanState = shogibanState()
         // get ban
@@ -73,10 +120,22 @@ class ImageRecoResultActivity : AppCompatActivity() {
                 shogibanState.ban_result.plus(Pair(i*10+j,imageView.tag))
             }
         }
+        // mochigoma_name
+        val mochigoma_name = resources.getStringArray(R.array.komaname_shogibanState).slice(1..7)
         // get sente
+        for (koma in mochigoma_name) {
+            val imageView = findViewById<Spinner>(string2MochigomaSpinnerId(koma, "sente"))
+            val size = imageView.selectedItem.toString().toInt()
+            if (size > 0) { shogibanState.sente_mochi.plus(Pair(koma, size)) }
+        }
         // get gote
+        for (koma in mochigoma_name) {
+            val imageView = findViewById<Spinner>(string2MochigomaSpinnerId(koma, "gote"))
+            val size = imageView.selectedItem.toString().toInt()
+            if (size > 0) { shogibanState.gote_mochi.plus(Pair(koma, size)) }
+        }
         // get teban
-        // set empty-point
+        // set empty-point (=already setted as default)
         return shogibanState
     }
 
