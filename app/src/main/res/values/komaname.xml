@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="komaname_shogibanState">
+        <item> * </item>
+        <item> fu</item>
+        <item> ky</item>
+        <item> ke</item>
+        <item> gi</item>
+        <item> ki</item>
+        <item> ka</item>
+        <item> hi</item>
+        <item> ou</item>
+        <item> to</item>
+        <item> ny</item>
+        <item> nk</item>
+        <item> ng</item>
+        <item> um</item>
+        <item> ry</item>
+        <item>vfu</item>
+        <item>vky</item>
+        <item>vke</item>
+        <item>vgi</item>
+        <item>vki</item>
+        <item>vka</item>
+        <item>vhi</item>
+        <item>vou</item>
+        <item>vto</item>
+        <item>vny</item>
+        <item>vnk</item>
+        <item>vng</item>
+        <item>vum</item>
+        <item>vry</item>
+    </string-array>
+    <string-array name="komaname_sfen">
+        <item>1</item>
+        <item>P</item>
+        <item>L</item>
+        <item>N</item>
+        <item>S</item>
+        <item>G</item>
+        <item>B</item>
+        <item>R</item>
+        <item>K</item>
+        <item>+P</item>
+        <item>+L</item>
+        <item>+N</item>
+        <item>+S</item>
+        <item>+B</item>
+        <item>+R</item>
+        <item>p</item>
+        <item>l</item>
+        <item>n</item>
+        <item>s</item>
+        <item>g</item>
+        <item>b</item>
+        <item>r</item>
+        <item>k</item>
+        <item>+p</item>
+        <item>+l</item>
+        <item>+n</item>
+        <item>+s</item>
+        <item>+b</item>
+        <item>+r</item>
+    </string-array>
+</resources>

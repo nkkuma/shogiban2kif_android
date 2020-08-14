@@ -4,45 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ImageRecoResultActivity">
+    tools:context=".ImageRecoResultActivity"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="-140dp">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView_recoresulttitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="70dp"
         android:text="認識結果"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_gote"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="413dp"
-        android:layout_height="461dp"
-        android:layout_marginTop="147dp"
-        android:layout_marginBottom="91dp"
+        android:layout_width="match_parent"
+        android:layout_height="421dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/ban"
         android:shrinkColumns="0,1,2,3,4,5,6,7,8"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_gote">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/border">
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_91"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -50,8 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -59,8 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -68,8 +67,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -77,8 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -86,8 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -95,8 +91,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -104,8 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -113,23 +107,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/border">
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_92"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -137,8 +130,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -146,8 +138,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -155,8 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -164,8 +154,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -173,8 +162,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -182,8 +170,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -191,8 +178,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -200,23 +186,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/border">
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_93"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -224,8 +209,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -233,8 +217,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -242,8 +225,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -251,8 +233,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -260,8 +241,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -269,8 +249,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -278,8 +257,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -287,23 +265,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/border">
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_94"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -311,8 +288,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -320,8 +296,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -329,8 +304,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -338,8 +312,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -347,8 +320,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -356,8 +328,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -365,8 +336,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -374,23 +344,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/border">
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_95"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -398,8 +367,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -407,8 +375,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -416,8 +383,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -425,8 +391,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -434,8 +399,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -443,8 +407,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -452,8 +415,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -461,23 +423,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/border">
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_96"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -485,8 +446,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -494,8 +454,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -503,8 +462,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -512,8 +470,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -521,8 +478,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -530,8 +486,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -539,8 +494,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -548,23 +502,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/border">
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_97"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -572,8 +525,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -581,8 +533,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -590,8 +541,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -599,8 +549,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -608,8 +557,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -617,8 +565,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -626,8 +573,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -635,23 +581,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/border">
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_98"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -659,8 +604,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -668,8 +612,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -677,8 +620,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -686,8 +628,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -695,8 +636,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -704,8 +644,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -713,8 +652,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -722,23 +660,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/border">
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_99"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -746,8 +683,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -755,8 +691,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -764,8 +699,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -773,8 +707,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -782,8 +715,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -791,8 +723,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -800,8 +731,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
 
             <ImageButton
@@ -809,34 +739,171 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
-                android:alpha="0"
-                android:background="#000000"
+                android:background="@drawable/border"
                 android:scaleType="fitCenter" />
         </TableRow>
     </TableLayout>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="101dp"
-        android:layout_marginEnd="81dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView3"
-         />
+    <LinearLayout
+        android:id="@+id/linearLayout_gote"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/textView_recoresulttitle">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="60dp"
-        android:layout_height="62dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginBottom="127dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
-         />
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mochigoma_fu"
+            android:entries="@array/mochigoma_fu_size"
+            android:textAlignment="viewEnd" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mochigoma_ky"
+            android:entries="@array/mochigoma_ky_size"
+            android:textAlignment="viewEnd" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mochigoma_ke"
+            android:entries="@array/mochigoma_ke_size"
+            android:textAlignment="viewEnd" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mochigoma_gi"
+            android:entries="@array/mochigoma_gi_size"
+            android:textAlignment="viewEnd" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:addStatesFromChildren="false"
+            android:background="@drawable/mochigoma_ki"
+            android:entries="@array/mochigoma_ki_size"
+            android:textAlignment="viewEnd" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mochigoma_ka"
+            android:entries="@array/mochigoma_ka_size"
+            android:textAlignment="viewEnd" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mochigoma_hi"
+            android:entries="@array/mochigoma_hi_size"
+            android:textAlignment="viewEnd" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_sente"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tableLayout"
+        tools:layout_editor_absoluteX="1dp">
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mochigoma_fu"
+            android:entries="@array/mochigoma_fu_size"
+            android:textAlignment="viewEnd" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mochigoma_ky"
+            android:entries="@array/mochigoma_ky_size"
+            android:textAlignment="viewEnd" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mochigoma_ke"
+            android:entries="@array/mochigoma_ke_size"
+            android:textAlignment="viewEnd" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mochigoma_gi"
+            android:entries="@array/mochigoma_gi_size"
+            android:textAlignment="viewEnd" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:addStatesFromChildren="false"
+            android:background="@drawable/mochigoma_ki"
+            android:entries="@array/mochigoma_ki_size"
+            android:textAlignment="viewEnd" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mochigoma_ka"
+            android:entries="@array/mochigoma_ka_size"
+            android:textAlignment="viewEnd" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mochigoma_hi"
+            android:entries="@array/mochigoma_hi_size"
+            android:textAlignment="viewEnd" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_sente"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+
+        <ImageButton
+            android:id="@+id/imageButton_kento"
+            android:layout_width="166dp"
+            android:layout_height="44dp"
+            android:onClick="jump2Kento"
+            android:scaleType="centerCrop"
+            android:src="@drawable/kento"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/imageButton_piyo"
+            android:layout_width="166dp"
+            android:layout_height="44dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/piyo_link"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

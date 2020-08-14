@@ -1,59 +1,54 @@
 package com.nkkuma.shogiban2kif_android
 
-import android.content.ContentResolver
-import android.content.ContentResolver.SCHEME_CONTENT
-import android.content.ContentResolver.SCHEME_FILE
-import android.content.Context
-import android.content.Intent
+import android.content.*
 import android.net.Uri
 import android.os.Bundle
-import android.widget.Switch
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.startActivity
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProviders
-import androidx.lifecycle.viewModelScope
-import com.github.kittinunf.fuel.core.Response
 import kotlinx.android.synthetic.main.activity_loading.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
-import java.io.File
-import java.io.FileDescriptor
-import java.io.InputStream
 
 
 class LoadingActivity : AppCompatActivity(){
+    var sengo: Boolean = false
+    var upfile: Uri = Uri.EMPTY
+    val BROADCAST_ACTION = " jp.co.casareal.genintentservice.broadcast"
+    private val RSS_JOB_ID = 1000
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loading)
 
-        val sengo = intent.getBooleanExtra("sengo", false)
-        val upfile = intent.getParcelableExtra<Uri>("upfile")
-        imageView.setImageURI(upfile)
-        textView_sengo.text = sengo.toString()
-
+        sengo = intent.getBooleanExtra("sengo", false)
+        upfile = intent.getParcelableExtra<Uri>("upfile")!!
         // Create a new coroutine to move the execution off the UI thread
-        runBlocking { recognizeOnServerCall(sengo, contenturi2fileuri(upfile!!)) }
+        // runBlocking { recognizeOnServerCall(sengo, contenturi2fileuri(upfile))
+        val serviceIntent = Intent().apply {
+            putExtra("sengo", sengo)
+            putExtra("upfile", upfile)
+        }
+        ImageRecoService().enqueueWork(this@LoadingActivity, serviceIntent)
     }
 
-    fun contenturi2fileuri(uri: Uri) : InputStream {
-        val path: String = ""
-        val contentResolver: ContentResolver = this@LoadingActivity.contentResolver
-        val someInputStream = contentResolver.openInputStream(uri)
-        return someInputStream!!
+    /**
+     * ネストクラスで定義したBroadcastReceiverを、（マニフェスト上にではなく）ここで登録する
+     */
+    override fun onResume() {
+        super.onResume()
+        registerReceiver(receiver, IntentFilter(BROADCAST_ACTION))
     }
 
-    suspend fun recognizeOnServerCall(sengo: Boolean, upfile: InputStream){
-        var response: String = ""
-        GlobalScope.launch(Dispatchers.IO) {
-            val imageRecoService = ImageRecoService()
-            response = imageRecoService.recognizeOnServer(upfile, sengo)
-        }.join()
-        val intent = Intent(this@LoadingActivity, ImageRecoResultActivity::class.java)
-        intent.putExtra("response", response)
-        startActivity(intent)
+    override fun onPause() {
+        super.onPause()
+        unregisterReceiver(receiver)
+    }
+    /**
+     * BroadcastReceiverでMyIntentServiceからの返答を受け取ろうと思います
+     */
+    private val receiver: BroadcastReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context, intent: Intent) {
+            val response = intent.extras!!.getString("response")
+            var sendIntent = Intent(this@LoadingActivity, ImageRecoResultActivity::class.java)
+            sendIntent.putExtra("response", response)
+            startActivity(sendIntent)
+        }
     }
 }

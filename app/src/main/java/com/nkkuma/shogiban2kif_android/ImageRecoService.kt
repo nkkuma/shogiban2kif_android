@@ -1,26 +1,48 @@
 package com.nkkuma.shogiban2kif_android
 
-import android.app.Service
+import android.content.ContentResolver
+import android.content.Context
 import android.content.Intent
-import android.os.IBinder
+import android.net.Uri
+import androidx.core.app.JobIntentService
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.BlobDataPart
 import com.github.kittinunf.fuel.core.InlineDataPart
-import com.github.kittinunf.fuel.core.Response
 import com.github.kittinunf.fuel.json.responseJson
 import com.github.kittinunf.result.Result
 import java.io.InputStream
 
 
-class ImageRecoService : Service() {
-    private val serverURL: String = "https://shogiban2kif.appspot.com/recognize"
-    private val imageFieldname: String = "upfile"
-    private val sengoFieldName: String = "hidden_sengo"
-    private val rotateFiledName: String = "hidden_rotate"
-    private val modeFieldName: String = "mode"
+class ImageRecoService : JobIntentService() {
+    companion object {
+        const val JOB_ID = 1001
+        val BROADCAST_ACTION = " jp.co.casareal.genintentservice.broadcast"
+        const val serverURL: String = "https://shogiban2kif.appspot.com/recognize"
+        const val imageFieldname: String = "upfile"
+        const val sengoFieldName: String = "hidden_sengo"
+        const val rotateFiledName: String = "hidden_rotate"
+        const val modeFieldName: String = "mode"
+    }
+    // 1
+    fun enqueueWork(context: Context, work: Intent) {
+        enqueueWork(context, ImageRecoService::class.java, JOB_ID, work)
+    }
+    // 3
+    override fun onHandleWork(intent: Intent) {
+        val file = intent.getParcelableExtra<Uri>("upfile")
+        var sengo = intent.getBooleanExtra("sengo", false)
+        var result = recognizeOnServer(contenturi2fileuri(file!!), sengo)
 
-    override fun onBind(intent: Intent): IBinder {
-        TODO("Return the communication channel to the service.")
+        val intent = Intent(BROADCAST_ACTION)
+        intent.putExtra("response", result)
+        intent.setPackage(applicationInfo.packageName)
+        sendBroadcast(intent)
+    }
+
+    fun contenturi2fileuri(uri: Uri) : InputStream {
+        val contentResolver: ContentResolver = this@ImageRecoService.contentResolver
+        val someInputStream = contentResolver.openInputStream(uri)
+        return someInputStream!!
     }
 
     fun recognizeOnServer(file: InputStream, sengo: Boolean, rotate: Int = 0, mode: String = "all"): String {

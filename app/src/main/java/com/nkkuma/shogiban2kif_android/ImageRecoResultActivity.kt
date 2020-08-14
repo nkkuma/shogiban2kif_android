@@ -1,14 +1,18 @@
 package com.nkkuma.shogiban2kif_android
 
+import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
-import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import com.github.kittinunf.fuel.core.Response
 import com.nkkuma.shogiban2kif_android.model.shogibanState
+import java.net.URLEncoder
+import java.util.*
+import kotlin.Comparator
+
 
 class ImageRecoResultActivity : AppCompatActivity() {
 
@@ -18,7 +22,7 @@ class ImageRecoResultActivity : AppCompatActivity() {
         val response = intent.getStringExtra("response")
         if (response != null) {
             val result = string2Class(response.replace("'","\""))
-            setImage(result)
+            setBanImage(result)
         }
         // TODO: illegal pattern Error output
     }
@@ -38,24 +42,109 @@ class ImageRecoResultActivity : AppCompatActivity() {
         return resources.getIdentifier(komaImgString,"drawable", packageName)
     }
 
-    fun initImage() {
+    fun initBanImage() {
         // init image
         for (i in 1..9) {
             for (j in 1..9) {
                 val imageView = findViewById<ImageButton>(string2ImageButtonId((i*10+j).toString()))
                 imageView.setImageResource(string2ImageSource(" * "))
+                imageView.tag = " * "
             }
         }
     }
 
-    fun setImage(result: shogibanState) {
+    fun setBanImage(result: shogibanState) {
         // init image
-        initImage()
+        initBanImage()
         // set image
         for ((place,koma) in result.ban_result) {
             val imageView = findViewById<ImageButton>(string2ImageButtonId(place.toString()))
             imageView.setImageResource(string2ImageSource(koma))
-            imageView.alpha = 1.0F
+            imageView.tag = koma
         }
     }
+
+    fun getFixedState(): shogibanState {
+        var shogibanState = shogibanState()
+        // get ban
+        for (i in 1..9) {
+            for (j in 1..9) {
+                val imageView = findViewById<ImageButton>(string2ImageButtonId((i*10+j).toString()))
+                shogibanState.ban_result.plus(Pair(i*10+j,imageView.tag))
+            }
+        }
+        // get sente
+        // get gote
+        // get teban
+        // set empty-point
+        return shogibanState
+    }
+
+    fun sort_mochigoma(map: Map<String, Int>, array: Array<String>): SortedMap<String, Int> {
+        val comparator: Comparator<String> =
+            Comparator<String> { a, b -> array.indexOf(a).compareTo(array.indexOf(b)) }
+        return map.toSortedMap(comparator)
+    }
+
+    fun shogibanState2Sfen(shogibanState: shogibanState): String {
+        val tebans = mapOf<String,String>("sente" to "b", "gote" to "w")
+        var komas = mapOf<String,String>()
+        val kifkomas = resources.getStringArray(R.array.komaname_shogibanState)
+        val sfenkomas = resources.getStringArray(R.array.komaname_sfen)
+        for (i in 0..28) { komas.plus(Pair(kifkomas[i],sfenkomas[i])) }
+        var kif_text    = ""
+        val ban_result  = shogibanState.ban_result
+        val sente_mochi = sort_mochigoma(shogibanState.sente_mochi, kifkomas)
+        val gote_mochi  = sort_mochigoma(shogibanState.gote_mochi, kifkomas)
+        val teban       = shogibanState.teban;
+
+        // i = 行番号 // j = 列番号
+        for (i in 1..9){
+            var before_koma = ""
+            for (j in 9..1){
+                val tmpkoma = ban_result[j*10+i]
+                val koma = komas[tmpkoma]
+                if ((before_koma == "1") && (koma == "1")){
+                    val space = (kif_text.takeLast(1).toInt() + 1).toString()
+                    kif_text = kif_text.dropLast(1) + space
+                }else{
+                    kif_text += koma
+                }
+                before_koma = koma!!
+            }
+            kif_text += "/"
+        }
+        // 最後のスライスを消す
+        kif_text = kif_text.dropLast(1)
+
+        // 手番
+        kif_text += " " + tebans[teban]
+
+        // 持ち駒
+        kif_text += " ";
+        for ((koma, kazu) in sente_mochi) {
+            var kazuString = kazu.toString()
+            if (kazuString == "1"){ kazuString = "" }
+            kif_text = kif_text + kazuString + komas[" $koma"]
+        }
+        for ((koma, kazu) in gote_mochi) {
+            var kazuString = kazu.toString()
+            if (kazuString == "1"){ kazuString = "" }
+            kif_text = kif_text + kazuString + komas[" $koma"]
+        }
+        if (kif_text.takeLast(1) == " ")  {kif_text+="-"}
+
+        // 何手目
+        kif_text += " 1"
+
+        return kif_text
+    }
+
+    fun jump2Kento(view: View) {
+        val sfen4Kento = URLEncoder.encode(shogibanState2Sfen(getFixedState()), "UTF-8")
+        val linkUri = Uri.parse("https://www.kento-shogi.com/?initpos=$sfen4Kento")
+        val kentoIntent = Intent(Intent.ACTION_VIEW, linkUri)
+        startActivity(kentoIntent)
+    }
+
 }
