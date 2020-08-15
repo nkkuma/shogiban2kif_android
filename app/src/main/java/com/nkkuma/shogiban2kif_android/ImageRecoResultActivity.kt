@@ -141,6 +141,7 @@ class ImageRecoResultActivity : AppCompatActivity() {
         }
         shogibanState.gote_mochi = mochigomagote_map
         // get teban
+        shogibanState.teban = "sente"
         // set empty-point (=already setted as default)
         return shogibanState
     }
@@ -153,10 +154,10 @@ class ImageRecoResultActivity : AppCompatActivity() {
 
     fun shogibanState2Sfen(shogibanState: shogibanState): String {
         val tebans = mapOf<String,String>("sente" to "b", "gote" to "w")
-        var komas = mapOf<String,String>()
+        var komas = mutableMapOf<String,String>()
         val kifkomas = resources.getStringArray(R.array.komaname_shogibanState)
         val sfenkomas = resources.getStringArray(R.array.komaname_sfen)
-        for (i in 0..28) { komas.plus(Pair(kifkomas[i],sfenkomas[i])) }
+        for (i in 0..28) { komas[kifkomas[i]] = sfenkomas[i] }
         var kif_text    = ""
         val ban_result  = shogibanState.ban_result
         val sente_mochi = sort_mochigoma(shogibanState.sente_mochi, kifkomas)
@@ -166,8 +167,8 @@ class ImageRecoResultActivity : AppCompatActivity() {
         // i = 行番号 // j = 列番号
         for (i in 1..9){
             var before_koma = ""
-            for (j in 9..1){
-                val tmpkoma = ban_result[j*10+i]
+            for (j in 9 downTo 1){
+                val tmpkoma = ban_result[j*10+i]!!.trim()
                 val koma = komas[tmpkoma]
                 if ((before_koma == "1") && (koma == "1")){
                     val space = (kif_text.takeLast(1).toInt() + 1).toString()
