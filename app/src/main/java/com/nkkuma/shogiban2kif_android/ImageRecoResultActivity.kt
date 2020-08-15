@@ -5,11 +5,15 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.Spinner
+import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import com.nkkuma.shogiban2kif_android.model.shogibanState
+import kotlinx.android.synthetic.main.activity_loading.*
 import java.net.URLEncoder
 import java.util.*
 import kotlin.Comparator
@@ -40,6 +44,10 @@ class ImageRecoResultActivity : AppCompatActivity() {
         return resources.getIdentifier("imageRecoResultBtn_$place","id", packageName)
     }
 
+    fun string2FixButtonId(koma: String): Int {
+        return resources.getIdentifier("fixKoma_$koma","id", packageName)
+    }
+
     fun string2MochigomaSpinnerId(koma: String, teban: String): Int {
         return resources.getIdentifier("spinner_mochigoma${teban}_${koma}","id", packageName)
     }
@@ -49,13 +57,17 @@ class ImageRecoResultActivity : AppCompatActivity() {
         return resources.getIdentifier(komaImgString,"drawable", packageName)
     }
 
+    fun replaceBanKoma(place: String, koma: String) {
+        val imageView = findViewById<ImageButton>(string2ImageButtonId(place))
+        imageView.setImageResource(string2ImageSource(koma))
+        imageView.tag = koma
+    }
+
     fun initBanImage() {
         // init image
         for (i in 1..9) {
             for (j in 1..9) {
-                val imageView = findViewById<ImageButton>(string2ImageButtonId((i*10+j).toString()))
-                imageView.setImageResource(string2ImageSource(" * "))
-                imageView.tag = " * "
+                replaceBanKoma((i*10+j).toString(), " * ")
             }
         }
     }
@@ -65,9 +77,7 @@ class ImageRecoResultActivity : AppCompatActivity() {
         initBanImage()
         // set image
         for ((place,koma) in result.ban_result) {
-            val imageView = findViewById<ImageButton>(string2ImageButtonId(place.toString()))
-            imageView.setImageResource(string2ImageSource(koma))
-            imageView.tag = koma
+            replaceBanKoma(place.toString(), koma)
         }
     }
 
@@ -109,6 +119,131 @@ class ImageRecoResultActivity : AppCompatActivity() {
             val imageView = findViewById<Spinner>(string2MochigomaSpinnerId(koma, "gote"))
             imageView.setSelection(num)
         }
+    }
+
+    fun onMochigomaChange(view: View) {
+        val spinner = findViewById<Spinner>(view.id)
+        if (spinner.selectedItem.toString() == "0") {
+            spinner.alpha = 0.5F
+        }
+        else {
+            spinner.alpha = 1.0F
+        }
+    }
+
+    fun fixBanKoma_11(view: View) { fixBanKoma(view, "11")}
+    fun fixBanKoma_12(view: View) { fixBanKoma(view, "12")}
+    fun fixBanKoma_13(view: View) { fixBanKoma(view, "13")}
+    fun fixBanKoma_14(view: View) { fixBanKoma(view, "14")}
+    fun fixBanKoma_15(view: View) { fixBanKoma(view, "15")}
+    fun fixBanKoma_16(view: View) { fixBanKoma(view, "16")}
+    fun fixBanKoma_17(view: View) { fixBanKoma(view, "17")}
+    fun fixBanKoma_18(view: View) { fixBanKoma(view, "18")}
+    fun fixBanKoma_19(view: View) { fixBanKoma(view, "19")}
+    fun fixBanKoma_21(view: View) { fixBanKoma(view, "21")}
+    fun fixBanKoma_22(view: View) { fixBanKoma(view, "22")}
+    fun fixBanKoma_23(view: View) { fixBanKoma(view, "23")}
+    fun fixBanKoma_24(view: View) { fixBanKoma(view, "24")}
+    fun fixBanKoma_25(view: View) { fixBanKoma(view, "25")}
+    fun fixBanKoma_26(view: View) { fixBanKoma(view, "26")}
+    fun fixBanKoma_27(view: View) { fixBanKoma(view, "27")}
+    fun fixBanKoma_28(view: View) { fixBanKoma(view, "28")}
+    fun fixBanKoma_29(view: View) { fixBanKoma(view, "29")}
+    fun fixBanKoma_31(view: View) { fixBanKoma(view, "31")}
+    fun fixBanKoma_32(view: View) { fixBanKoma(view, "32")}
+    fun fixBanKoma_33(view: View) { fixBanKoma(view, "33")}
+    fun fixBanKoma_34(view: View) { fixBanKoma(view, "34")}
+    fun fixBanKoma_35(view: View) { fixBanKoma(view, "35")}
+    fun fixBanKoma_36(view: View) { fixBanKoma(view, "36")}
+    fun fixBanKoma_37(view: View) { fixBanKoma(view, "37")}
+    fun fixBanKoma_38(view: View) { fixBanKoma(view, "38")}
+    fun fixBanKoma_39(view: View) { fixBanKoma(view, "39")}
+    fun fixBanKoma_41(view: View) { fixBanKoma(view, "41")}
+    fun fixBanKoma_42(view: View) { fixBanKoma(view, "42")}
+    fun fixBanKoma_43(view: View) { fixBanKoma(view, "43")}
+    fun fixBanKoma_44(view: View) { fixBanKoma(view, "44")}
+    fun fixBanKoma_45(view: View) { fixBanKoma(view, "45")}
+    fun fixBanKoma_46(view: View) { fixBanKoma(view, "46")}
+    fun fixBanKoma_47(view: View) { fixBanKoma(view, "47")}
+    fun fixBanKoma_48(view: View) { fixBanKoma(view, "48")}
+    fun fixBanKoma_49(view: View) { fixBanKoma(view, "49")}
+    fun fixBanKoma_51(view: View) { fixBanKoma(view, "51")}
+    fun fixBanKoma_52(view: View) { fixBanKoma(view, "52")}
+    fun fixBanKoma_53(view: View) { fixBanKoma(view, "53")}
+    fun fixBanKoma_54(view: View) { fixBanKoma(view, "54")}
+    fun fixBanKoma_55(view: View) { fixBanKoma(view, "55")}
+    fun fixBanKoma_56(view: View) { fixBanKoma(view, "56")}
+    fun fixBanKoma_57(view: View) { fixBanKoma(view, "57")}
+    fun fixBanKoma_58(view: View) { fixBanKoma(view, "58")}
+    fun fixBanKoma_59(view: View) { fixBanKoma(view, "59")}
+    fun fixBanKoma_61(view: View) { fixBanKoma(view, "61")}
+    fun fixBanKoma_62(view: View) { fixBanKoma(view, "62")}
+    fun fixBanKoma_63(view: View) { fixBanKoma(view, "63")}
+    fun fixBanKoma_64(view: View) { fixBanKoma(view, "64")}
+    fun fixBanKoma_65(view: View) { fixBanKoma(view, "65")}
+    fun fixBanKoma_66(view: View) { fixBanKoma(view, "66")}
+    fun fixBanKoma_67(view: View) { fixBanKoma(view, "67")}
+    fun fixBanKoma_68(view: View) { fixBanKoma(view, "68")}
+    fun fixBanKoma_69(view: View) { fixBanKoma(view, "69")}
+    fun fixBanKoma_71(view: View) { fixBanKoma(view, "71")}
+    fun fixBanKoma_72(view: View) { fixBanKoma(view, "72")}
+    fun fixBanKoma_73(view: View) { fixBanKoma(view, "73")}
+    fun fixBanKoma_74(view: View) { fixBanKoma(view, "74")}
+    fun fixBanKoma_75(view: View) { fixBanKoma(view, "75")}
+    fun fixBanKoma_76(view: View) { fixBanKoma(view, "76")}
+    fun fixBanKoma_77(view: View) { fixBanKoma(view, "77")}
+    fun fixBanKoma_78(view: View) { fixBanKoma(view, "78")}
+    fun fixBanKoma_79(view: View) { fixBanKoma(view, "79")}
+    fun fixBanKoma_81(view: View) { fixBanKoma(view, "81")}
+    fun fixBanKoma_82(view: View) { fixBanKoma(view, "82")}
+    fun fixBanKoma_83(view: View) { fixBanKoma(view, "83")}
+    fun fixBanKoma_84(view: View) { fixBanKoma(view, "84")}
+    fun fixBanKoma_85(view: View) { fixBanKoma(view, "85")}
+    fun fixBanKoma_86(view: View) { fixBanKoma(view, "86")}
+    fun fixBanKoma_87(view: View) { fixBanKoma(view, "87")}
+    fun fixBanKoma_88(view: View) { fixBanKoma(view, "88")}
+    fun fixBanKoma_89(view: View) { fixBanKoma(view, "89")}
+    fun fixBanKoma_91(view: View) { fixBanKoma(view, "91")}
+    fun fixBanKoma_92(view: View) { fixBanKoma(view, "92")}
+    fun fixBanKoma_93(view: View) { fixBanKoma(view, "93")}
+    fun fixBanKoma_94(view: View) { fixBanKoma(view, "94")}
+    fun fixBanKoma_95(view: View) { fixBanKoma(view, "95")}
+    fun fixBanKoma_96(view: View) { fixBanKoma(view, "96")}
+    fun fixBanKoma_97(view: View) { fixBanKoma(view, "97")}
+    fun fixBanKoma_98(view: View) { fixBanKoma(view, "98")}
+    fun fixBanKoma_99(view: View) { fixBanKoma(view, "99")}
+
+    fun fixBanKoma(view: View, place: String) {
+        var alert = AlertDialog.Builder(this)
+        alert.setTitle("修正ダイアログ")
+        alert.setView(R.layout.alert_layout)
+        var dialog = alert.create();
+        dialog.show()
+
+        val koma_: TextView? = dialog.findViewById(R.id.fixKoma_)
+        koma_!!.setOnClickListener {
+            // 駒を変える
+            replaceBanKoma(place, " * ")
+            // Dialogを消す
+            dialog.dismiss();
+        }
+
+        val komaNames = resources.getStringArray(R.array.komaname_shogibanState).drop(1)
+        for (komaName in komaNames) {
+            val id = string2FixButtonId(komaName)
+            val komaImageView: ImageView? = dialog.findViewById(id)
+            komaImageView!!.setOnClickListener {
+                // 駒を変える
+                replaceBanKoma(place, komaName)
+                // Dialogを消す
+                dialog.dismiss();
+            }
+        }
+
+        // alert.setView(alertView);
+        // var dialog = alert.create();
+        // dialog.show()
+        // val komas: List<Int> = (11..99).toList().filter { it%10 > 0 }.map { string2ImageButtonId(it.toString()) }
     }
 
     fun getFixedState(): shogibanState {

@@ -44,7 +44,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_91"/>
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_81"
@@ -52,7 +53,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_81" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_71"
@@ -60,7 +62,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_71" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_61"
@@ -68,7 +71,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_61" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_51"
@@ -76,7 +80,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_51" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_41"
@@ -84,7 +89,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_41" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_31"
@@ -92,7 +98,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_31" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_21"
@@ -100,7 +107,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_21" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_11"
@@ -108,7 +116,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_11" />
         </TableRow>
 
         <TableRow
@@ -123,7 +132,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_92" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_82"
@@ -131,7 +141,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_82" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_72"
@@ -139,7 +150,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_72" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_62"
@@ -147,7 +159,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_62" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_52"
@@ -155,7 +168,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_52" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_42"
@@ -163,7 +177,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_42" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_32"
@@ -171,7 +186,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_32" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_22"
@@ -179,7 +195,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_22" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_12"
@@ -187,7 +204,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_12" />
         </TableRow>
 
         <TableRow
@@ -202,7 +220,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_93" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_83"
@@ -210,7 +229,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_83" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_73"
@@ -218,7 +238,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_73" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_63"
@@ -226,7 +247,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_63" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_53"
@@ -234,7 +256,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_53" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_43"
@@ -242,7 +265,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_43" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_33"
@@ -250,7 +274,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_33" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_23"
@@ -258,7 +283,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_23" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_13"
@@ -266,7 +292,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_13" />
         </TableRow>
 
         <TableRow
@@ -281,7 +308,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_94" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_84"
@@ -289,7 +317,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_84" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_74"
@@ -297,7 +326,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_74" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_64"
@@ -305,7 +335,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_64" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_54"
@@ -313,7 +344,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_54" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_44"
@@ -321,7 +353,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_44" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_34"
@@ -329,7 +362,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_34" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_24"
@@ -337,7 +371,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_24" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_14"
@@ -345,7 +380,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_14" />
         </TableRow>
 
         <TableRow
@@ -360,7 +396,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_95" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_85"
@@ -368,7 +405,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_85" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_75"
@@ -376,7 +414,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_75" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_65"
@@ -384,7 +423,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_65" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_55"
@@ -392,7 +432,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_55" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_45"
@@ -400,7 +441,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_45" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_35"
@@ -408,7 +450,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_35" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_25"
@@ -416,7 +459,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_25" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_15"
@@ -424,7 +468,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_15" />
         </TableRow>
 
         <TableRow
@@ -439,7 +484,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_96" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_86"
@@ -447,7 +493,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_86" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_76"
@@ -455,7 +502,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_76" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_66"
@@ -463,7 +511,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_66" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_56"
@@ -471,7 +520,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_56" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_46"
@@ -479,7 +529,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_46" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_36"
@@ -487,7 +538,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_36" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_26"
@@ -495,7 +547,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_26" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_16"
@@ -503,7 +556,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_16" />
         </TableRow>
 
         <TableRow
@@ -518,7 +572,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_97" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_87"
@@ -526,7 +581,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_87" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_77"
@@ -534,7 +590,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_77" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_67"
@@ -542,7 +599,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_67" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_57"
@@ -550,7 +608,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_57" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_47"
@@ -558,7 +617,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_47" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_37"
@@ -566,7 +626,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_37" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_27"
@@ -574,7 +635,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_27" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_17"
@@ -582,7 +644,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_17" />
         </TableRow>
 
         <TableRow
@@ -597,7 +660,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_98" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_88"
@@ -605,7 +669,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_88" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_78"
@@ -613,7 +678,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_78" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_68"
@@ -621,7 +687,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_68" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_58"
@@ -629,7 +696,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_58" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_48"
@@ -637,7 +705,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_48" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_38"
@@ -645,7 +714,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_38" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_28"
@@ -653,7 +723,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_28" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_18"
@@ -661,7 +732,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_18" />
         </TableRow>
 
         <TableRow
@@ -676,7 +748,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_99" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_89"
@@ -684,7 +757,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_89" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_79"
@@ -692,7 +766,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_79" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_69"
@@ -700,7 +775,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_69" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_59"
@@ -708,7 +784,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_59" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_49"
@@ -716,7 +793,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_49" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_39"
@@ -724,7 +802,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_39" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_29"
@@ -732,7 +811,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_29" />
 
             <ImageButton
                 android:id="@+id/imageRecoResultBtn_19"
@@ -740,7 +820,8 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:onClick="fixBanKoma_19" />
         </TableRow>
     </TableLayout>
 

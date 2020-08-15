@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">Shogiban2Kif</string>
     <string name="launch_camera">カメラ起動</string>
+    <string name="ban_koma">盤内の駒</string>
 </resources>
