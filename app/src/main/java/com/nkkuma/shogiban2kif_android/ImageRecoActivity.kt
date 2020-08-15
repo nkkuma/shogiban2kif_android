@@ -27,9 +27,13 @@ class ImageRecoActivity : AppCompatActivity() {
 
     private val RESULT_CAMERA = 1001
     private val REQUEST_PERMISSION = 1002
+    private val RESULT_GALARRY = 1003
     private var imageView: ImageView? = null
     private var cameraUri: Uri? = null
     private var cameraFile: File? = null
+    private val inputCameraImageMode = "CAMERA"
+    private val inputGalleryImageMode = "GALALERY"
+    private var inputImageMode = inputCameraImageMode
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,17 +46,13 @@ class ImageRecoActivity : AppCompatActivity() {
     }
     // カメラボタンタップ時
     fun onCameraButtonTapped(view: View?) {
-        // Android 6, API 23以上でパーミッシンの確認
-        if (Build.VERSION.SDK_INT >= 23) {
-            checkPermission()
-        } else {
-            cameraIntent()
-        }
+        inputImageMode = inputCameraImageMode
+        checkPermission4CameraInput()
     }
     // 写真ボタンタップ時
     fun onGalleryButtonTapped(view: View?){
-        val intent = Intent(this, ImageRecoActivity::class.java)
-        startActivity(intent)
+        inputImageMode = inputGalleryImageMode
+        checkPermission4GalleryInput()
     }
     // 実行ボタンタップ時
     fun onRecognizeButtonTapped(view: View?){
@@ -75,6 +75,16 @@ class ImageRecoActivity : AppCompatActivity() {
                 cameraFile?.let { registerDatabase(it) }
             } else {
                 Log.d("debug", "cameraUri == null")
+            }
+        }
+        else if (requestCode == RESULT_GALARRY) {
+            try {
+                intent?.data?.also { uri ->
+                    cameraUri = uri
+                    imageView!!.setImageURI(cameraUri)
+                }
+            } catch (e: Exception) {
+                Toast.makeText(this, "エラーが発生しました", Toast.LENGTH_LONG).show()
             }
         }
     }
@@ -108,28 +118,48 @@ class ImageRecoActivity : AppCompatActivity() {
         Log.d("debug", "startActivityForResult()")
     }
 
+    private fun galleryIntent() {
+        var intentGallery = Intent(Intent.ACTION_OPEN_DOCUMENT)
+        intentGallery.addCategory(Intent.CATEGORY_OPENABLE)
+        intentGallery.setType("image/*")
+        startActivityForResult(intentGallery, RESULT_GALARRY)
+    }
+
     // Runtime Permission check
-    private fun checkPermission() {
+    private fun checkPermission4CameraInput() {
         // 既に許可している
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.INTERNET) == PackageManager.PERMISSION_GRANTED) {
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
-                        cameraIntent()
-                    }
-                    else {
-                        requestPermission(Manifest.permission.CAMERA)
-                    }
-                }
-                else {
-                    requestPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                }
-            }
-            else {
-                requestPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
-            }
-        } else {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.INTERNET) != PackageManager.PERMISSION_GRANTED) {
             requestPermission(Manifest.permission.INTERNET)
+        }
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            requestPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+        }
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            requestPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        }
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            requestPermission(Manifest.permission.CAMERA)
+        }
+        if ((ActivityCompat.checkSelfPermission(this, Manifest.permission.INTERNET) == PackageManager.PERMISSION_GRANTED)
+            && (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED)
+            && (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED)
+            && (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED)) {
+            cameraIntent()
+        }
+    }
+
+    // Runtime Permission check
+    private fun checkPermission4GalleryInput() {
+        // 既に許可している
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.INTERNET) != PackageManager.PERMISSION_GRANTED) {
+            requestPermission(Manifest.permission.INTERNET)
+        }
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            requestPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+        }
+        if ((ActivityCompat.checkSelfPermission(this, Manifest.permission.INTERNET) == PackageManager.PERMISSION_GRANTED)
+            && (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED)) {
+            galleryIntent()
         }
     }
 
@@ -169,7 +199,8 @@ class ImageRecoActivity : AppCompatActivity() {
         if (requestCode == REQUEST_PERMISSION) {
             // 使用が許可された
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                checkPermission()
+                if (inputImageMode == inputCameraImageMode) { checkPermission4CameraInput() }
+                if (inputImageMode == inputGalleryImageMode) { checkPermission4GalleryInput() }
             } else {
                 // それでも拒否された時の対応
                 val toast = Toast.makeText(

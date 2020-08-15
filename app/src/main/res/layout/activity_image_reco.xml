@@ -89,6 +89,7 @@
         android:layout_height="72dp"
         android:layout_marginEnd="102dp"
         android:layout_marginBottom="24dp"
+        android:onClick="onGalleryButtonTapped"
         app:layout_constraintBottom_toTopOf="@+id/imageView_imageReco"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton"
