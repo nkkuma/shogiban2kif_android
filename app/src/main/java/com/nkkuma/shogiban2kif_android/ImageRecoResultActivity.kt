@@ -375,4 +375,10 @@ class ImageRecoResultActivity : AppCompatActivity() {
         startActivity(kentoIntent)
     }
 
+    fun jump2Piyo(view: View) {
+        val sfen4Kento = URLEncoder.encode(shogibanState2Sfen(getFixedState()), "UTF-8")
+        val linkUri = Uri.parse("piyoshogi://?sfen=position sfen $sfen4Kento moves ")
+        val kentoIntent = Intent(Intent.ACTION_VIEW, linkUri)
+        startActivity(kentoIntent)
+    }
 }
