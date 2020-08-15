@@ -4,16 +4,12 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.Spinner
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import com.nkkuma.shogiban2kif_android.model.shogibanState
-import kotlinx.android.synthetic.main.activity_loading.*
 import java.net.URLEncoder
 import java.util.*
 import kotlin.Comparator
@@ -88,6 +84,22 @@ class ImageRecoResultActivity : AppCompatActivity() {
         for (koma in mochigoma_name) {
             val imageView = findViewById<Spinner>(string2MochigomaSpinnerId(koma, "sente"))
             imageView.setSelection(0)
+            imageView.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+                // アイテムが選択された時の動作
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View,
+                    position: Int,
+                    id: Long
+                ) {
+                    // Spinner を取得
+                    val spinner = parent as Spinner
+                    onMochigomaChange(spinner)
+                }
+
+                // 何も選択されなかった時の動作
+                override fun onNothingSelected(parent: AdapterView<*>?) {}
+            }
         }
     }
 
@@ -108,6 +120,22 @@ class ImageRecoResultActivity : AppCompatActivity() {
         for (koma in mochigoma_name) {
             val imageView = findViewById<Spinner>(string2MochigomaSpinnerId(koma, "gote"))
             imageView.setSelection(0)
+            imageView.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+                // アイテムが選択された時の動作
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View,
+                    position: Int,
+                    id: Long
+                ) {
+                    // Spinner を取得
+                    val spinner = parent as Spinner
+                    onMochigomaChange(spinner)
+                }
+
+                // 何も選択されなかった時の動作
+                override fun onNothingSelected(parent: AdapterView<*>?) {}
+            }
         }
     }
 
@@ -121,8 +149,7 @@ class ImageRecoResultActivity : AppCompatActivity() {
         }
     }
 
-    fun onMochigomaChange(view: View) {
-        val spinner = findViewById<Spinner>(view.id)
+    fun onMochigomaChange(spinner: Spinner) {
         if (spinner.selectedItem.toString() == "0") {
             spinner.alpha = 0.5F
         }

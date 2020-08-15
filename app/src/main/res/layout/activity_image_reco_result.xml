@@ -840,7 +840,8 @@
             android:layout_weight="1"
             android:background="@drawable/mochigoma_fu"
             android:entries="@array/mochigoma_fu_size"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:alpha="0.5F" />
 
         <Spinner
             android:id="@+id/spinner_mochigomagote_ky"
@@ -849,7 +850,8 @@
             android:layout_weight="1"
             android:background="@drawable/mochigoma_ky"
             android:entries="@array/mochigoma_ky_size"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:alpha="0.5F"  />
 
         <Spinner
             android:id="@+id/spinner_mochigomagote_ke"
@@ -858,7 +860,8 @@
             android:layout_weight="1"
             android:background="@drawable/mochigoma_ke"
             android:entries="@array/mochigoma_ke_size"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:alpha="0.5F"  />
 
         <Spinner
             android:id="@+id/spinner_mochigomagote_gi"
@@ -867,7 +870,8 @@
             android:layout_weight="1"
             android:background="@drawable/mochigoma_gi"
             android:entries="@array/mochigoma_gi_size"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:alpha="0.5F"  />
 
         <Spinner
             android:id="@+id/spinner_mochigomagote_ki"
@@ -877,7 +881,8 @@
             android:addStatesFromChildren="false"
             android:background="@drawable/mochigoma_ki"
             android:entries="@array/mochigoma_ki_size"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:alpha="0.5F"  />
 
         <Spinner
             android:id="@+id/spinner_mochigomagote_ka"
@@ -886,7 +891,8 @@
             android:layout_weight="1"
             android:background="@drawable/mochigoma_ka"
             android:entries="@array/mochigoma_ka_size"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:alpha="0.5F"  />
 
         <Spinner
             android:id="@+id/spinner_mochigomagote_hi"
@@ -895,7 +901,8 @@
             android:layout_weight="1"
             android:background="@drawable/mochigoma_hi"
             android:entries="@array/mochigoma_hi_size"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:alpha="0.5F"  />
     </LinearLayout>
 
     <LinearLayout
@@ -914,7 +921,8 @@
             android:layout_weight="1"
             android:background="@drawable/mochigoma_fu"
             android:entries="@array/mochigoma_fu_size"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:alpha="0.5F"  />
 
         <Spinner
             android:id="@+id/spinner_mochigomasente_ky"
@@ -923,7 +931,8 @@
             android:layout_weight="1"
             android:background="@drawable/mochigoma_ky"
             android:entries="@array/mochigoma_ky_size"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:alpha="0.5F"  />
 
         <Spinner
             android:id="@+id/spinner_mochigomasente_ke"
@@ -932,7 +941,8 @@
             android:layout_weight="1"
             android:background="@drawable/mochigoma_ke"
             android:entries="@array/mochigoma_ke_size"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:alpha="0.5F"  />
 
         <Spinner
             android:id="@+id/spinner_mochigomasente_gi"
@@ -941,7 +951,8 @@
             android:layout_weight="1"
             android:background="@drawable/mochigoma_gi"
             android:entries="@array/mochigoma_gi_size"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:alpha="0.5F"  />
 
         <Spinner
             android:id="@+id/spinner_mochigomasente_ki"
@@ -951,7 +962,8 @@
             android:addStatesFromChildren="false"
             android:background="@drawable/mochigoma_ki"
             android:entries="@array/mochigoma_ki_size"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:alpha="0.5F"  />
 
         <Spinner
             android:id="@+id/spinner_mochigomasente_ka"
@@ -960,7 +972,8 @@
             android:layout_weight="1"
             android:background="@drawable/mochigoma_ka"
             android:entries="@array/mochigoma_ka_size"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:alpha="0.5F"  />
 
         <Spinner
             android:id="@+id/spinner_mochigomasente_hi"
@@ -969,7 +982,8 @@
             android:layout_weight="1"
             android:background="@drawable/mochigoma_hi"
             android:entries="@array/mochigoma_hi_size"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:alpha="0.5F"  />
     </LinearLayout>
 
 
