@@ -16,4 +16,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, ImageRecoActivity::class.java)
         startActivity(intent)
     }
+    // 実行ボタンタップ時
+    fun onVideoButtonTapped(view: View?){
+        val intent = Intent(this, VideoRecoInitActivity::class.java)
+        startActivity(intent)
+    }
 }

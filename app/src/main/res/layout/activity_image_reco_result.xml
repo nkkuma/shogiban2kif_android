@@ -8,12 +8,22 @@
     tools:layout_editor_absoluteX="1dp"
     tools:layout_editor_absoluteY="-140dp">
 
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onBackButtonClick"
+        android:text="←"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView_recoresulttitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="70dp"
         android:text="認識結果"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout_gote"
         app:layout_constraintEnd_toEndOf="parent"
@@ -986,32 +996,95 @@
             android:alpha="0.5"  />
     </LinearLayout>
 
-
     <LinearLayout
+        android:id="@+id/textView_recoresult_otherApp"
         android:layout_width="match_parent"
-        android:layout_height="44dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout_sente"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="1dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="検討アプリ"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="161dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_recoresult_otherApp"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/textView_recoresult_otherApp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
 
         <ImageButton
             android:id="@+id/imageButton_kento"
-            android:layout_width="166dp"
-            android:layout_height="44dp"
+            android:layout_width="142dp"
+            android:layout_height="36dp"
             android:onClick="jump2Kento"
             android:scaleType="centerCrop"
             android:src="@drawable/kento"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            android:background="#CCC" />
 
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content" />
         <ImageButton
             android:id="@+id/imageButton_piyo"
-            android:layout_width="166dp"
-            android:layout_height="44dp"
+            android:layout_width="142dp"
+            android:layout_height="36dp"
             android:onClick="jump2Piyo"
             android:scaleType="centerCrop"
             android:src="@drawable/piyo_link"
+            android:background="#FFF"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/textView_recoresult_shareSNS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_recoresult_otherApp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="SNSでシェア"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="161dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_recoresult_shareSNS"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/textView_recoresult_shareSNS"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+
+        <ImageButton
+            android:id="@+id/imageButton_Twitter"
+            android:layout_width="100dp"
+            android:layout_height="26dp"
+            android:onClick="jump2Twitter"
+            android:scaleType="centerCrop"
+            android:src="@drawable/twitter"
+            android:background="#FFF"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
 

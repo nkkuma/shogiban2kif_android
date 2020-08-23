@@ -9,6 +9,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.result.Result
 import com.nkkuma.shogiban2kif_android.model.shogibanState
 import java.net.URLEncoder
 import java.util.*
@@ -28,6 +30,11 @@ class ImageRecoResultActivity : AppCompatActivity() {
             setMochigomaGoteNumber(result)
         }
         // TODO: illegal pattern Error output
+    }
+
+    fun onBackButtonClick(view: View) {
+        val intent = Intent(this, ImageRecoActivity::class.java)
+        startActivity(intent)
     }
 
     fun string2Class(response: String): shogibanState {
@@ -378,7 +385,31 @@ class ImageRecoResultActivity : AppCompatActivity() {
     fun jump2Piyo(view: View) {
         val sfen4Kento = URLEncoder.encode(shogibanState2Sfen(getFixedState()), "UTF-8")
         val linkUri = Uri.parse("piyoshogi://?sfen=position sfen $sfen4Kento moves ")
-        val kentoIntent = Intent(Intent.ACTION_VIEW, linkUri)
-        startActivity(kentoIntent)
+        val piyoIntent = Intent(Intent.ACTION_VIEW, linkUri)
+        startActivity(piyoIntent)
+    }
+
+    fun jump2Twitter(view: View) {
+        val sfen = shogibanState2Sfen(getFixedState())
+        val imageURLCreateURL = "https://us-central1-shogiban2kif.cloudfunctions.net/sfen2imgurl?sfen="+Uri.parse(sfen)
+        imageURLCreateURL.httpGet().response { request, response, result ->
+            when (result) {
+                is Result.Success -> {
+                    // レスポンスボディを表示
+                    println("非同期処理の結果：" + String(response.data))
+                    val imageURL = String(response.data)
+                    val text = URLEncoder.encode("将棋盤局面(sfen): $sfen URL: $imageURL", "UTF-8")
+                    val shareURL = URLEncoder.encode("https://shogi.nkkuma.tokyo", "UTF-8")
+                    val hashtags = URLEncoder.encode("えぬっくま", "UTF-8")
+                    val via = URLEncoder.encode("nkkuma_service", "UTF-8")
+                    val linkUri = Uri.parse("http://twitter.com/share?url=${shareURL}&text=${text}&hashtags=${hashtags}&via=${via}")
+                    val twitterIntent = Intent(Intent.ACTION_VIEW, linkUri)
+                    startActivity(twitterIntent)
+                }
+                is Result.Failure -> {
+                    println("通信に失敗しました。")
+                }
+            }
+        }
     }
 }

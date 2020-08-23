@@ -46,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
-        android:onClick="onButtonTapped"
+        android:onClick="onVideoButtonTapped"
         android:text="動画認識"
         app:layout_constraintStart_toStartOf="@+id/buttonImage"
         app:layout_constraintTop_toBottomOf="@+id/buttonImage" />
