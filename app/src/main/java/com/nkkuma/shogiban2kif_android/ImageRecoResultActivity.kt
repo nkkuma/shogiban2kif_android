@@ -391,15 +391,15 @@ class ImageRecoResultActivity : AppCompatActivity() {
 
     fun jump2Twitter(view: View) {
         val sfen = shogibanState2Sfen(getFixedState())
-        val imageURLCreateURL = "https://us-central1-shogiban2kif.cloudfunctions.net/sfen2imgurl?sfen="+Uri.parse(sfen)
+        val imageURLCreateURL = "https://sfenreader-dot-shogiban2kif.appspot.com/twiimg?sfen="+Uri.parse(sfen)
         imageURLCreateURL.httpGet().response { request, response, result ->
             when (result) {
                 is Result.Success -> {
                     // レスポンスボディを表示
                     println("非同期処理の結果：" + String(response.data))
                     val imageURL = String(response.data)
-                    val text = URLEncoder.encode("将棋盤局面(sfen): $sfen URL: $imageURL", "UTF-8")
-                    val shareURL = URLEncoder.encode("https://shogi.nkkuma.tokyo", "UTF-8")
+                    val text = URLEncoder.encode("将棋盤局面認識結果:", "UTF-8")
+                    val shareURL = URLEncoder.encode(imageURL, "UTF-8")
                     val hashtags = URLEncoder.encode("えぬっくま", "UTF-8")
                     val via = URLEncoder.encode("nkkuma_service", "UTF-8")
                     val linkUri = Uri.parse("http://twitter.com/share?url=${shareURL}&text=${text}&hashtags=${hashtags}&via=${via}")
